@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+    <script src="./scripts/keys.js" defer type="module"></script>
+    <script src="./scripts/app.js" defer type="module"></script>
+
+    <link rel="stylesheet" href="./css/main.min.css">
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+<style>
+    #mapid { height: 180px; }
+</style>
+<body>
+    <header class="header">
+        <h1 class="header__appTitle">IP Address Tracker</h1>
+        <h4 id="message" class="header__message hidden"></h4>
+        <form class="header__form">
+            <input class="header__ipBar" type="search" name="ip" id="ip" placeholder="190.0.0.0">
+            <button class="header__btn" id="btn">
+                <img src="./images/icon-arrow.svg" alt="search for ip">
+            </button>
+        </form>
+
+    </header>
+    <div class="info" id="ipInfo">
+        <div class="info__data">
+            <h4>IP ADRESS</h4>
+            <span class="info__value" id="ipData">192.212.174.101</span>
+        </div>
+        <div class="info__data">
+            <h4>LOCATION</h4>
+            <span class="info__value" id="locationData">Here</span>
+        </div>
+        <div class="info__data">
+            <h4>TIMEZONE</h4>
+            <span class="info__value" id="timezoneData">UTC-05:00</span>
+        </div>
+        <div class="info__data">
+            <h4>ISP</h4>
+            <span class="info__value" id="ispData">SpaceX Starlink</span>
+        </div>
+    </div>
+    
+    <div id="mapid"></div>
+</body>
+</html>
